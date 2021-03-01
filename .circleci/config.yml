@@ -7,7 +7,7 @@ jobs:
         environment:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgress
-          POSTGRES_DB: example12
+          POSTGRES_DB: example13
       - image: redis:latest
 
     working_directory: ~/repo
