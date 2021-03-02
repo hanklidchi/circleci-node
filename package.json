@@ -14,12 +14,13 @@
   },
   "dependencies": {
     "ioredis": "^4.6.2",
+    "neo4j-driver": "^4.2.2",
     "pg": "^7.3.0",
     "reflect-metadata": "^0.1.10",
     "typeorm": "0.2.15-rc.2"
   },
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "ts-node src/index.js",
     "test": "cross-env NODE_ENV=test jest",
     "ci:test": "cross-env NODE_ENV=test jest --ci --runInBand --detectOpenHandles --forceExit",
     "docker:build": "docker build -t benawad/example:latest .",
