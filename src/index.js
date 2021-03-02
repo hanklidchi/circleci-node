@@ -1,3 +1,4 @@
+const { stat } = require('fs');
 const neo4j = require('neo4j-driver');
 
 const driver = neo4j.driver(
@@ -29,6 +30,8 @@ async function start() {
   await driver.close();
 }
 
-start();
+setTimeout(() => {
+  start();
+}, 5000);
 
 console.log('hello');
