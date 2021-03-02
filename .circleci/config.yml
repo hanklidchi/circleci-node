@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  wait-for: cobli/wait-for
 jobs:
   build:
     docker:
@@ -19,6 +21,8 @@ jobs:
 
     steps:
       - checkout
+
+      - wait-for/neo4j
 
       # Download and cache dependencies
       - restore_cache:
