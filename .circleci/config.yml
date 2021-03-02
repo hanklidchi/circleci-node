@@ -5,7 +5,7 @@ jobs:
       - image: node:11.10.1
       - image: neo4j:4.2
         environment:
-          NEO4J_AUTH: neo4j/password
+          NEO4J_AUTH: none
           TINI_SUBREAPER: 'true'
 
       # - image: circleci/postgres:11-alpine-ram
