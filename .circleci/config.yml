@@ -3,12 +3,16 @@ jobs:
   build:
     docker:
       - image: node:11.10.1
-      - image: circleci/postgres:11-alpine-ram
+      - image: neo4j:3.3
         environment:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgress
-          POSTGRES_DB: example12
-      - image: redis:latest
+          NEO4J_AUTH: neo4j/password
+
+      # - image: circleci/postgres:11-alpine-ram
+      #   environment:
+      #     POSTGRES_USER: postgres
+      #     POSTGRES_PASSWORD: postgress
+      #     POSTGRES_DB: example12
+      # - image: redis:latest
 
     working_directory: ~/repo
 
